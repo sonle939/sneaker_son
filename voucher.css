@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto+Mono:wght@500&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --black-color: #000;
+    --white-color: #fff;
+    --plum-color: #DDA0DD;
+    --border-color: #DCDCDC;
+    --green-color: #006400;
+    --light-black-color:#24252A;
+    --backgroud--color: #424242;
+}
+/*phan dau*/
+.main{
+    height: 100vh;
+    background-color: var(--white-color);
+}
+/*menu*/
+li, a, button{
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--black-color);
+    text-decoration: none;
+}
+header{
+    background-color: white;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+.btn-header{
+    font-size: 40px;
+    font-family: 'Impact Charcoal', sans-serif;
+    color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 30px;
+    display: none;
+}
+.nav-name{
+    text-align: center;
+    padding-top: 23px;
+    padding-left: 100px;
+}
+.nav-name img {
+    transition: 0.5s;
+}
+.nav-name img:hover{
+    transform: scale(1.1);
+}
+.nav-link{
+    display: flex;
+    margin-top: 45px;
+    margin-right: 90px;
+}
+.nav-link li{
+    list-style: none;
+}
+.nav-link li a{
+    padding: 16px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.nav-link li a:hover{
+    background-color: #7B68EE;
+    border-radius: 50px;
+    color: black;
+}
+.account{
+    background-color: #7B68EE;
+    border-radius: 50px;
+    color: black;
+}
+/*reponsite navbar*/
+@media (max-width: 1173px){
+    .btn-header{
+        display: block;
+    }
+    .nav-name{
+        margin-left: -20px;
+        margin-top: 7px;
+    }
+    .nav-link {
+        position: fixed;
+        width: 100%;
+        height: 380px;
+        background-color: #E6E6FA;
+        top: 75px;
+        left: 0px;
+        text-align: center;
+        transition: all .5s;
+        display: none;
+        z-index: 5;
+    }
+    .nav-link li{
+        padding: 25px 10px;
+    }
+    .nav-link.active{
+        display: block;
+        transition: all .5s;
+    }
+}
+#slideshow{
+    overflow: hidden;
+    padding-top: 120px;
+}
+#slideshow figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slideshow infinite;
+    object-fit: cover;
+}
+#slideshow figure img{
+    width: 20%;
+    float: left;
+    height: 600px;
+    object-fit: cover;
+}
+ @keyframes slideshow{
+     0%{
+         left: 0;
+     }
+     20% {
+         left: 0;
+     }
+     25% {
+         left: -100%;
+     }
+     45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+ }
+ /*nha tai tro*/
+.donos{
+    height: 200px;
+}
+.donos-container{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+.donos-item{
+    display: flex;
+    height: 140px;
+    width: 70%;
+    background-color: #D0D0D0;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+.donos-item__logo{
+    height: 100%;
+    width: 170px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 14px 15px;
+}
+.donos-item__logo > img{
+    width: 90%;
+    border-radius: 50%;
+    border: 1px solid #DCDCDC;
+}
+
+/*voucher cua shop*/
+.shop{
+    height: 490px;
+    padding-top: 50px;
+}
+.shop__addvou{
+    width: 300px;
+    height: 50px;
+    background-color: #CCC;
+    border-radius: 30px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 8px;
+    color: var(--white-color);
+    font-weight: bold;
+    margin: 0 auto;
+}
+.shop-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.shop__voucher-item{
+    display: flex;
+    height: 140px;
+    width: 600px;
+    background-color: var(--white-color);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 20px;
+}
+.voucher-text{
+    height: 100%;
+    width: 140px;
+    background-color: #3CB371;
+    text-align: center;
+    padding: 40px 0;
+    border-radius: 20px;
+}
+.voucher-text p{
+    font-size: 25px;
+    color: var(--white-color);
+    padding: 2px 3px;
+}
+.voucher__mes{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 10px;
+}
+.voucher__mes h4{
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Impact Charcoal', sans-serif;
+    padding-top: 10px;
+}
+.mes__price{
+    width: 40%;
+    margin: 7px 0;
+    border: 1px solid red;
+}
+.mes__price p{
+    color: red;
+}
+.voucher__mes span{
+    opacity: 0.7;
+    margin-top: 10px;
+}
+.voucher-btn{
+    text-align: center;
+    width: 110px;
+    height: 45px;
+    background-color: red;
+    padding-top: 12px;
+    margin-top: 48px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.voucher-btn a{
+    color: var(--white-color);
+}
+/*voucher nha ti tro*/
+.donos-voucher{
+    height: 720px;
+    padding-top: 50px;  
+}
+.voucher-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.donos__voucher-item{
+    display: flex;
+    height: 140px;
+    width: 650px;
+    background-color: var(--white-color);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 20px;
+}
+.donos__text{
+    height: 100%;
+    width: 200px;
+    background-color: var(--border-color);
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 8px;
+}
+.donos__text img{
+    text-align: center;
+    height: 70%;
+    width: 100px;
+    border-radius: 50%;
+}
+.donos__text >p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.donos__mess{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 15px;
+    width: 50%;
+}
+.donos__mess h4{
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Impact Charcoal', sans-serif;
+    padding-top: 10px;
+}
+.donos__mess span{
+    opacity: 0.7;
+    margin-top: 10px;
+}
+.donos-btn{
+    text-align: center;
+    width: 110px;
+    height: 45px;
+    background-color: red;
+    padding-top: 12px;
+    margin-top: 48px;
+    border-radius: 5px;
+}
+.donos-btn a{
+    color: var(--white-color);
+}
+/*footer*/
+/*col1*/
+.footer{
+    height: 375px;
+    background-color: #E6E6FA;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+.footer-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-col1{
+    width: 444px;
+}
+.footer-col1 p{
+    font-size: 30px;
+    line-height: 1.4;
+    padding-top: 10px;
+}
+.footer-col1 h4{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px ;
+}
+.footer-col1 ol{
+    display: flex;
+}
+.footer-col1 ol li{
+    list-style: none;
+    text-align: left;
+    padding-top: 10px;
+}
+.footer-col1 ol li a{
+    font-size: 35px;
+    padding: 0 10px;
+}
+
+/*col2*/
+.footer-col2{
+    width: 222px;
+}
+.footer-col2 h3{
+    font-size: 30px;
+    font-family: 'Impact Charcoal', sans-serif;
+    margin-top: 10px;
+}
+.footer-col2 li{
+    list-style: none;
+    padding: 15px 0;
+}
+.footer-col2 li a{
+    font-size: 18px;
+    font-style: inherit;
+}
+.footer-col3{
+    width: 222px;
+}
+.footer-col3 h3{
+    font-size: 30px;
+    font-family: 'Impact Charcoal', sans-serif;
+    margin-top: 10px;
+}
+.footer-col3 ol li{
+    list-style: none;
+    padding: 15px 0;
+}
+.footer-col3 li a{
+    font-size: 18px;
+    font-style: inherit;
+}
+.footer-col4{
+    width: 222px;
+}
+.footer-col4 h3{
+    font-size: 30px;
+    font-family: 'Impact Charcoal', sans-serif;
+    margin-top: 10px;
+}
+.footer-col4 ol li{
+    list-style: none;
+    padding: 15px 0;
+    font-size: 18px;
+    font-style: inherit;
+}
+.copyright{
+    height: 41px;
+    padding: 1rem 0;
+}
+.copyright-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.copyright-container p{
+}
